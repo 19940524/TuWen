@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="S4N-Ea-94c">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s77-zK-hoE">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Fzo-86-Ri3"/>
+                    </constraints>
+                    <state key="normal" image="emoji_1"/>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-ko-xJW">
+                    <rect key="frame" x="80" y="0.0" width="80" height="48"/>
+                    <state key="normal" image="emoji_2"/>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-z0-dPO">
+                    <rect key="frame" x="160" y="0.0" width="80" height="48"/>
+                    <state key="normal" image="emoji_3"/>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dem-1u-YrU">
+                    <rect key="frame" x="240" y="0.0" width="80" height="48"/>
+                    <state key="normal" image="emoji_4"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dg5-z0-dPO" firstAttribute="height" secondItem="s77-zK-hoE" secondAttribute="height" id="19f-wf-iOW"/>
+                <constraint firstItem="vUH-ko-xJW" firstAttribute="width" secondItem="s77-zK-hoE" secondAttribute="width" id="2qb-Bv-Hkj"/>
+                <constraint firstAttribute="trailing" secondItem="dem-1u-YrU" secondAttribute="trailing" id="2rB-0Q-cUz"/>
+                <constraint firstItem="dem-1u-YrU" firstAttribute="leading" secondItem="dg5-z0-dPO" secondAttribute="trailing" id="4T0-X0-RHR"/>
+                <constraint firstItem="dem-1u-YrU" firstAttribute="height" secondItem="s77-zK-hoE" secondAttribute="height" id="76A-yO-k8x"/>
+                <constraint firstItem="dem-1u-YrU" firstAttribute="width" secondItem="s77-zK-hoE" secondAttribute="width" id="E0B-1I-BSG"/>
+                <constraint firstItem="dg5-z0-dPO" firstAttribute="width" secondItem="s77-zK-hoE" secondAttribute="width" id="G7R-He-jAg"/>
+                <constraint firstItem="vUH-ko-xJW" firstAttribute="height" secondItem="s77-zK-hoE" secondAttribute="height" id="Gzs-p0-Dwc"/>
+                <constraint firstItem="dg5-z0-dPO" firstAttribute="leading" secondItem="vUH-ko-xJW" secondAttribute="trailing" id="JZK-GA-Oub"/>
+                <constraint firstItem="vUH-ko-xJW" firstAttribute="leading" secondItem="s77-zK-hoE" secondAttribute="trailing" id="WNE-Tq-3HR"/>
+                <constraint firstItem="vUH-ko-xJW" firstAttribute="top" secondItem="S4N-Ea-94c" secondAttribute="top" id="eey-Fy-oK4"/>
+                <constraint firstItem="dem-1u-YrU" firstAttribute="top" secondItem="S4N-Ea-94c" secondAttribute="top" id="fXy-OC-wwJ"/>
+                <constraint firstItem="s77-zK-hoE" firstAttribute="leading" secondItem="S4N-Ea-94c" secondAttribute="leading" id="hGW-8d-UiP"/>
+                <constraint firstItem="dg5-z0-dPO" firstAttribute="top" secondItem="S4N-Ea-94c" secondAttribute="top" id="nk4-LS-Xwu"/>
+                <constraint firstItem="s77-zK-hoE" firstAttribute="top" secondItem="S4N-Ea-94c" secondAttribute="top" id="tkI-N8-CXI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="386" y="396"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="emoji_1" width="32" height="32"/>
+        <image name="emoji_2" width="32" height="32"/>
+        <image name="emoji_3" width="32" height="32"/>
+        <image name="emoji_4" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,14 @@
+//
+//  EmojiTextAttachment.h
+//  TuWen
+//
+//  Created by GuoBin on 16/6/3.
+//  Copyright © 2016年 GuoBin. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface EmojiTextAttachment : NSTextAttachment
+@property(strong, nonatomic) NSString *emojiTag;
+@property(assign, nonatomic) CGSize emojiSize;  //For emoji image size
+@end

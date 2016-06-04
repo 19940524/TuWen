@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57CA933C3706CD8C358D888C /* libPods-TuWen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2EA31FF8320D49637EC063 /* libPods-TuWen.a */; };
+		A65E34CE1D019ACD0050AFBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E34CD1D019ACD0050AFBF /* main.m */; };
+		A65E34D11D019ACD0050AFBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E34D01D019ACD0050AFBF /* AppDelegate.m */; };
+		A65E34D41D019ACD0050AFBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E34D31D019ACD0050AFBF /* ViewController.m */; };
+		A65E34D71D019ACD0050AFBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E34D51D019ACD0050AFBF /* Main.storyboard */; };
+		A65E34D91D019ACD0050AFBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E34D81D019ACD0050AFBF /* Assets.xcassets */; };
+		A65E34DC1D019ACD0050AFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E34DA1D019ACD0050AFBF /* LaunchScreen.storyboard */; };
+		A65E34E71D019ACD0050AFBF /* TuWenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E34E61D019ACD0050AFBF /* TuWenTests.m */; };
+		A65E34F21D019ACD0050AFBF /* TuWenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E34F11D019ACD0050AFBF /* TuWenUITests.m */; };
+		A65E35041D019B760050AFBF /* EmojiTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E35011D019B760050AFBF /* EmojiTextAttachment.m */; };
+		A65E35051D019B760050AFBF /* NSAttributedString+EmojiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E35031D019B760050AFBF /* NSAttributedString+EmojiExtension.m */; };
+		A65E35081D019DA60050AFBF /* CYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E35071D019DA60050AFBF /* CYTextView.m */; };
+		A66DBD561D02799A0087B88A /* EmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66DBD551D02799A0087B88A /* EmojiView.xib */; };
+		A66DBD5C1D027AD50087B88A /* ReplyToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DBD5B1D027AD50087B88A /* ReplyToolbar.m */; };
+		A66DBD5E1D02D5F70087B88A /* Expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66DBD5D1D02D5F70087B88A /* Expression.plist */; };
+		A66DBD601D02D6F30087B88A /* ClippedExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A66DBD5F1D02D6F30087B88A /* ClippedExpression.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A65E34E31D019ACD0050AFBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65E34C11D019ACC0050AFBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65E34C81D019ACD0050AFBF;
+			remoteInfo = TuWen;
+		};
+		A65E34EE1D019ACD0050AFBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65E34C11D019ACC0050AFBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65E34C81D019ACD0050AFBF;
+			remoteInfo = TuWen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17F7620AB0A2D8659171C0CD /* Pods-TuWen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuWen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuWen/Pods-TuWen.debug.xcconfig"; sourceTree = "<group>"; };
+		A65E34C91D019ACD0050AFBF /* TuWen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuWen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E34CD1D019ACD0050AFBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A65E34CF1D019ACD0050AFBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A65E34D01D019ACD0050AFBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A65E34D21D019ACD0050AFBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A65E34D31D019ACD0050AFBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A65E34D61D019ACD0050AFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A65E34D81D019ACD0050AFBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A65E34DB1D019ACD0050AFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A65E34DD1D019ACD0050AFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E34E21D019ACD0050AFBF /* TuWenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuWenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E34E61D019ACD0050AFBF /* TuWenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuWenTests.m; sourceTree = "<group>"; };
+		A65E34E81D019ACD0050AFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E34ED1D019ACD0050AFBF /* TuWenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuWenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E34F11D019ACD0050AFBF /* TuWenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuWenUITests.m; sourceTree = "<group>"; };
+		A65E34F31D019ACD0050AFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E35001D019B760050AFBF /* EmojiTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiTextAttachment.h; sourceTree = "<group>"; };
+		A65E35011D019B760050AFBF /* EmojiTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiTextAttachment.m; sourceTree = "<group>"; };
+		A65E35021D019B760050AFBF /* NSAttributedString+EmojiExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+EmojiExtension.h"; sourceTree = "<group>"; };
+		A65E35031D019B760050AFBF /* NSAttributedString+EmojiExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+EmojiExtension.m"; sourceTree = "<group>"; };
+		A65E35061D019DA60050AFBF /* CYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTextView.h; sourceTree = "<group>"; };
+		A65E35071D019DA60050AFBF /* CYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTextView.m; sourceTree = "<group>"; };
+		A66DBD551D02799A0087B88A /* EmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiView.xib; sourceTree = "<group>"; };
+		A66DBD5A1D027AD50087B88A /* ReplyToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyToolbar.h; sourceTree = "<group>"; };
+		A66DBD5B1D027AD50087B88A /* ReplyToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyToolbar.m; sourceTree = "<group>"; };
+		A66DBD5D1D02D5F70087B88A /* Expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expression.plist; sourceTree = "<group>"; };
+		A66DBD5F1D02D6F30087B88A /* ClippedExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ClippedExpression.bundle; sourceTree = "<group>"; };
+		FC2EA31FF8320D49637EC063 /* libPods-TuWen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuWen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEA9961EA43640F76D020BE7 /* Pods-TuWen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuWen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuWen/Pods-TuWen.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A65E34C61D019ACD0050AFBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57CA933C3706CD8C358D888C /* libPods-TuWen.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34DF1D019ACD0050AFBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34EA1D019ACD0050AFBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40E981B50B6AACD3EDB4A8CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC2EA31FF8320D49637EC063 /* libPods-TuWen.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		760718CA3D59C8C4946FDD6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17F7620AB0A2D8659171C0CD /* Pods-TuWen.debug.xcconfig */,
+				FEA9961EA43640F76D020BE7 /* Pods-TuWen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A65E34C01D019ACC0050AFBF = {
+			isa = PBXGroup;
+			children = (
+				A65E34CB1D019ACD0050AFBF /* TuWen */,
+				A65E34E51D019ACD0050AFBF /* TuWenTests */,
+				A65E34F01D019ACD0050AFBF /* TuWenUITests */,
+				A65E34CA1D019ACD0050AFBF /* Products */,
+				760718CA3D59C8C4946FDD6E /* Pods */,
+				40E981B50B6AACD3EDB4A8CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A65E34CA1D019ACD0050AFBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A65E34C91D019ACD0050AFBF /* TuWen.app */,
+				A65E34E21D019ACD0050AFBF /* TuWenTests.xctest */,
+				A65E34ED1D019ACD0050AFBF /* TuWenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A65E34CB1D019ACD0050AFBF /* TuWen */ = {
+			isa = PBXGroup;
+			children = (
+				A65E34FF1D019B760050AFBF /* CYTextView */,
+				A65E34CF1D019ACD0050AFBF /* AppDelegate.h */,
+				A65E34D01D019ACD0050AFBF /* AppDelegate.m */,
+				A65E34D21D019ACD0050AFBF /* ViewController.h */,
+				A65E34D31D019ACD0050AFBF /* ViewController.m */,
+				A66DBD5A1D027AD50087B88A /* ReplyToolbar.h */,
+				A66DBD5B1D027AD50087B88A /* ReplyToolbar.m */,
+				A65E34D51D019ACD0050AFBF /* Main.storyboard */,
+				A66DBD551D02799A0087B88A /* EmojiView.xib */,
+				A66DBD5D1D02D5F70087B88A /* Expression.plist */,
+				A66DBD5F1D02D6F30087B88A /* ClippedExpression.bundle */,
+				A65E34D81D019ACD0050AFBF /* Assets.xcassets */,
+				A65E34DA1D019ACD0050AFBF /* LaunchScreen.storyboard */,
+				A65E34DD1D019ACD0050AFBF /* Info.plist */,
+				A65E34CC1D019ACD0050AFBF /* Supporting Files */,
+			);
+			path = TuWen;
+			sourceTree = "<group>";
+		};
+		A65E34CC1D019ACD0050AFBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A65E34CD1D019ACD0050AFBF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A65E34E51D019ACD0050AFBF /* TuWenTests */ = {
+			isa = PBXGroup;
+			children = (
+				A65E34E61D019ACD0050AFBF /* TuWenTests.m */,
+				A65E34E81D019ACD0050AFBF /* Info.plist */,
+			);
+			path = TuWenTests;
+			sourceTree = "<group>";
+		};
+		A65E34F01D019ACD0050AFBF /* TuWenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A65E34F11D019ACD0050AFBF /* TuWenUITests.m */,
+				A65E34F31D019ACD0050AFBF /* Info.plist */,
+			);
+			path = TuWenUITests;
+			sourceTree = "<group>";
+		};
+		A65E34FF1D019B760050AFBF /* CYTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A65E35001D019B760050AFBF /* EmojiTextAttachment.h */,
+				A65E35011D019B760050AFBF /* EmojiTextAttachment.m */,
+				A65E35021D019B760050AFBF /* NSAttributedString+EmojiExtension.h */,
+				A65E35031D019B760050AFBF /* NSAttributedString+EmojiExtension.m */,
+				A65E35061D019DA60050AFBF /* CYTextView.h */,
+				A65E35071D019DA60050AFBF /* CYTextView.m */,
+			);
+			path = CYTextView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A65E34C81D019ACD0050AFBF /* TuWen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65E34F61D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWen" */;
+			buildPhases = (
+				366FC19E483E50D38D448429 /* 📦 Check Pods Manifest.lock */,
+				A65E34C51D019ACD0050AFBF /* Sources */,
+				A65E34C61D019ACD0050AFBF /* Frameworks */,
+				A65E34C71D019ACD0050AFBF /* Resources */,
+				3ECFC37048FFBE7FD6C4B1C3 /* 📦 Embed Pods Frameworks */,
+				68411D191E7795B618ACF2C3 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuWen;
+			productName = TuWen;
+			productReference = A65E34C91D019ACD0050AFBF /* TuWen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A65E34E11D019ACD0050AFBF /* TuWenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65E34F91D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWenTests" */;
+			buildPhases = (
+				A65E34DE1D019ACD0050AFBF /* Sources */,
+				A65E34DF1D019ACD0050AFBF /* Frameworks */,
+				A65E34E01D019ACD0050AFBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65E34E41D019ACD0050AFBF /* PBXTargetDependency */,
+			);
+			name = TuWenTests;
+			productName = TuWenTests;
+			productReference = A65E34E21D019ACD0050AFBF /* TuWenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A65E34EC1D019ACD0050AFBF /* TuWenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65E34FC1D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWenUITests" */;
+			buildPhases = (
+				A65E34E91D019ACD0050AFBF /* Sources */,
+				A65E34EA1D019ACD0050AFBF /* Frameworks */,
+				A65E34EB1D019ACD0050AFBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65E34EF1D019ACD0050AFBF /* PBXTargetDependency */,
+			);
+			name = TuWenUITests;
+			productName = TuWenUITests;
+			productReference = A65E34ED1D019ACD0050AFBF /* TuWenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A65E34C11D019ACC0050AFBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = GuoBin;
+				TargetAttributes = {
+					A65E34C81D019ACD0050AFBF = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					A65E34E11D019ACD0050AFBF = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A65E34C81D019ACD0050AFBF;
+					};
+					A65E34EC1D019ACD0050AFBF = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A65E34C81D019ACD0050AFBF;
+					};
+				};
+			};
+			buildConfigurationList = A65E34C41D019ACC0050AFBF /* Build configuration list for PBXProject "TuWen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A65E34C01D019ACC0050AFBF;
+			productRefGroup = A65E34CA1D019ACD0050AFBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A65E34C81D019ACD0050AFBF /* TuWen */,
+				A65E34E11D019ACD0050AFBF /* TuWenTests */,
+				A65E34EC1D019ACD0050AFBF /* TuWenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A65E34C71D019ACD0050AFBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66DBD5E1D02D5F70087B88A /* Expression.plist in Resources */,
+				A66DBD601D02D6F30087B88A /* ClippedExpression.bundle in Resources */,
+				A65E34DC1D019ACD0050AFBF /* LaunchScreen.storyboard in Resources */,
+				A66DBD561D02799A0087B88A /* EmojiView.xib in Resources */,
+				A65E34D91D019ACD0050AFBF /* Assets.xcassets in Resources */,
+				A65E34D71D019ACD0050AFBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34E01D019ACD0050AFBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34EB1D019ACD0050AFBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		366FC19E483E50D38D448429 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3ECFC37048FFBE7FD6C4B1C3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuWen/Pods-TuWen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68411D191E7795B618ACF2C3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuWen/Pods-TuWen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A65E34C51D019ACD0050AFBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66DBD5C1D027AD50087B88A /* ReplyToolbar.m in Sources */,
+				A65E34D41D019ACD0050AFBF /* ViewController.m in Sources */,
+				A65E35081D019DA60050AFBF /* CYTextView.m in Sources */,
+				A65E35051D019B760050AFBF /* NSAttributedString+EmojiExtension.m in Sources */,
+				A65E34D11D019ACD0050AFBF /* AppDelegate.m in Sources */,
+				A65E35041D019B760050AFBF /* EmojiTextAttachment.m in Sources */,
+				A65E34CE1D019ACD0050AFBF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34DE1D019ACD0050AFBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65E34E71D019ACD0050AFBF /* TuWenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E34E91D019ACD0050AFBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65E34F21D019ACD0050AFBF /* TuWenUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A65E34E41D019ACD0050AFBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65E34C81D019ACD0050AFBF /* TuWen */;
+			targetProxy = A65E34E31D019ACD0050AFBF /* PBXContainerItemProxy */;
+		};
+		A65E34EF1D019ACD0050AFBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65E34C81D019ACD0050AFBF /* TuWen */;
+			targetProxy = A65E34EE1D019ACD0050AFBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A65E34D51D019ACD0050AFBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A65E34D61D019ACD0050AFBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A65E34DA1D019ACD0050AFBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A65E34DB1D019ACD0050AFBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A65E34F41D019ACD0050AFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A65E34F51D019ACD0050AFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A65E34F71D019ACD0050AFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F7620AB0A2D8659171C0CD /* Pods-TuWen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TuWen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A65E34F81D019ACD0050AFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEA9961EA43640F76D020BE7 /* Pods-TuWen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TuWen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A65E34FA1D019ACD0050AFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TuWenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuWen.app/TuWen";
+			};
+			name = Debug;
+		};
+		A65E34FB1D019ACD0050AFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TuWenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuWen.app/TuWen";
+			};
+			name = Release;
+		};
+		A65E34FD1D019ACD0050AFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TuWenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TuWen;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A65E34FE1D019ACD0050AFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TuWenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanghui.TuWenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TuWen;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A65E34C41D019ACC0050AFBF /* Build configuration list for PBXProject "TuWen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65E34F41D019ACD0050AFBF /* Debug */,
+				A65E34F51D019ACD0050AFBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65E34F61D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65E34F71D019ACD0050AFBF /* Debug */,
+				A65E34F81D019ACD0050AFBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65E34F91D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65E34FA1D019ACD0050AFBF /* Debug */,
+				A65E34FB1D019ACD0050AFBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65E34FC1D019ACD0050AFBF /* Build configuration list for PBXNativeTarget "TuWenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65E34FD1D019ACD0050AFBF /* Debug */,
+				A65E34FE1D019ACD0050AFBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A65E34C11D019ACC0050AFBF /* Project object */;
+}

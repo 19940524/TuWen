@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C43FEA06F7068F7EDD5C235370A7BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		07B5FC4CEBD01F4FA2F42FF656DC9147 /* NSMutableAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 809AA9AB550A1FC59691117FB5D0D706 /* NSMutableAttributedString+MLLabel.m */; };
+		0A0424DB5A9628D8A3B0DB6C3C7F5A65 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FC05C0CA8B4A7789369A52F7A99CA /* MLLabel.m */; };
+		367324E33DD239D6A6E2AAFFA809B7FF /* MLLabel+Override.h in Headers */ = {isa = PBXBuildFile; fileRef = 28B146E5321DF72B19378BD009011DD9 /* MLLabel+Override.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		418DA64400EC3478229F56C09A462F57 /* NSAttributedString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C50644B3ADEA79F8EDED8793A8F0B /* NSAttributedString+MLExpression.m */; };
+		4C1A0B31D9A9157717B9A93BED3594BA /* MLExpressionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D34A59967381939F0FAFA27683DCAA /* MLExpressionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C37249F6C6F1F7F28AE6A4585E21AC9 /* NSString+MLLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6E2A6D7E9F48CCA523972A0AEB3BF2 /* NSString+MLLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		511D06E3288E0D35BC8C8907A491EAF8 /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D8C3D59DB7E7A631048268713964F /* MLExpressionManager.m */; };
+		55D85272C8F8781625DC933913B0E5E4 /* NSString+MLExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9786D9123082A7E285B879A691084 /* NSString+MLExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6615EE373964BF109646DC57745265DB /* MLLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468AAD0DB7D19480E70867E04DC2D24 /* MLLabel-dummy.m */; };
+		7F5442E1AAF0EC0EEAE050067DDD14A0 /* MLLabelLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E18284DEFE7E37F83695D4B03504A8 /* MLLabelLayoutManager.m */; };
+		94F90F151ED91BF985860F3CB7C7F9A1 /* MLLabelLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 21BF64561297A830E407143F1A0896D7 /* MLLabelLayoutManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CF4FF3D894CD1762A05B5CA0EFAB83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A8AFFE2C728654D520A7878F9562E19D /* MLLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCD17AEC9DCAEAD13B8E88813B9BABB /* MLLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0EC58F15BE9C11404EC57971C0AA54A /* NSMutableAttributedString+MLLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8ACF85DFFC84A0AE600F980ED94B21 /* NSMutableAttributedString+MLLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B40C95F5128E2FFFA1B8FDCA3B207064 /* Pods-TuWen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DE06BB905B26D095CC2D9980CBBA25 /* Pods-TuWen-dummy.m */; };
+		BA40D8E99524FBB79B359E5DF666F279 /* NSAttributedString+MLLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5825648E66C9A42D9CB2E84DE5E9782 /* NSAttributedString+MLLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBE9F8AF00D8DDF6AE904867332D395F /* NSAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FE296DDBE7271195EC51D23853E2A /* NSAttributedString+MLLabel.m */; };
+		BFB75E9723335FC07E62613693387371 /* NSString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD25FF753C6B5394B8E2EDDA16C10AFF /* NSString+MLLabel.m */; };
+		CCFB108F29E453EEF85A8ED92BBF0451 /* MLTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 7707FB4D2E5B806C50A758B52578B568 /* MLTextAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD501D8B11B724AB19101C4BF7C47328 /* MLLinkLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9B0A877FC50A6E4E474DA3A236EA89 /* MLLinkLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECD2373BB88CC5714E2D6FCCBAD712DF /* NSString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F0195DD37536FCA93FBF4552F76269A8 /* NSString+MLExpression.m */; };
+		F44A933058E8C6D94A05EAFA3922DA48 /* MLTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 223CAEE5870A59F32FA6DB38F933393B /* MLTextAttachment.m */; };
+		F797D382958D35F685F1D9C3AAC8068F /* NSAttributedString+MLExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 272B702D640DF9EA0845A70F600CAC15 /* NSAttributedString+MLExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9DC12B05B624AE124370716889ACD05 /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44266BA2388AECB563093EF691B3EE97 /* MLLinkLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDF2CBBFB1CF716CA32FD9ADFBBCB23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A13C2021CDCA2F53EED207CA354BA810;
+			remoteInfo = MLLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05423D60E3EA25F489D7C0CF29B75E69 /* Pods-TuWen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuWen.release.xcconfig"; sourceTree = "<group>"; };
+		08D34A59967381939F0FAFA27683DCAA /* MLExpressionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLExpressionManager.h; path = Classes/Expression/MLExpressionManager.h; sourceTree = "<group>"; };
+		195FC05C0CA8B4A7789369A52F7A99CA /* MLLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLLabel.m; path = Classes/MLLabel.m; sourceTree = "<group>"; };
+		21BF64561297A830E407143F1A0896D7 /* MLLabelLayoutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLLabelLayoutManager.h; path = Classes/Helper/MLLabelLayoutManager.h; sourceTree = "<group>"; };
+		223CAEE5870A59F32FA6DB38F933393B /* MLTextAttachment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLTextAttachment.m; path = Classes/Expression/MLTextAttachment.m; sourceTree = "<group>"; };
+		272B702D640DF9EA0845A70F600CAC15 /* NSAttributedString+MLExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+MLExpression.h"; path = "Classes/Expression/NSAttributedString+MLExpression.h"; sourceTree = "<group>"; };
+		28B146E5321DF72B19378BD009011DD9 /* MLLabel+Override.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MLLabel+Override.h"; path = "Classes/Helper/MLLabel+Override.h"; sourceTree = "<group>"; };
+		32E07CF73FE72D809492EA3AF190C5DB /* Pods-TuWen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TuWen-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F8ACF85DFFC84A0AE600F980ED94B21 /* NSMutableAttributedString+MLLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+MLLabel.h"; path = "Classes/Category/NSMutableAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		44266BA2388AECB563093EF691B3EE97 /* MLLinkLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLLinkLabel.m; path = Classes/MLLinkLabel.m; sourceTree = "<group>"; };
+		4468AAD0DB7D19480E70867E04DC2D24 /* MLLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MLLabel-dummy.m"; sourceTree = "<group>"; };
+		5EB3D1366CC5A4E90BC8208D8B17D451 /* Pods-TuWen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TuWen-frameworks.sh"; sourceTree = "<group>"; };
+		5F6E2A6D7E9F48CCA523972A0AEB3BF2 /* NSString+MLLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MLLabel.h"; path = "Classes/Category/NSString+MLLabel.h"; sourceTree = "<group>"; };
+		68D657A8F9462F1B958BA745E32C24A9 /* MLLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLLabel-prefix.pch"; sourceTree = "<group>"; };
+		755EDA474F8153F75A36F7A883DD1521 /* Pods-TuWen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TuWen-resources.sh"; sourceTree = "<group>"; };
+		7707FB4D2E5B806C50A758B52578B568 /* MLTextAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLTextAttachment.h; path = Classes/Expression/MLTextAttachment.h; sourceTree = "<group>"; };
+		809AA9AB550A1FC59691117FB5D0D706 /* NSMutableAttributedString+MLLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+MLLabel.m"; path = "Classes/Category/NSMutableAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		88065FFD9D0A7A1B8A7213E8A7D69D7B /* MLLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MLLabel.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99DE06BB905B26D095CC2D9980CBBA25 /* Pods-TuWen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TuWen-dummy.m"; sourceTree = "<group>"; };
+		A4D4557F4626F14E85444447E5DFC0C0 /* libMLLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMLLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5542A63E528DA5A28352411AA605F24 /* libPods-TuWen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuWen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5825648E66C9A42D9CB2E84DE5E9782 /* NSAttributedString+MLLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+MLLabel.h"; path = "Classes/Category/NSAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		B75FE296DDBE7271195EC51D23853E2A /* NSAttributedString+MLLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+MLLabel.m"; path = "Classes/Category/NSAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		B7E18284DEFE7E37F83695D4B03504A8 /* MLLabelLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLLabelLayoutManager.m; path = Classes/Helper/MLLabelLayoutManager.m; sourceTree = "<group>"; };
+		BC9B0A877FC50A6E4E474DA3A236EA89 /* MLLinkLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLLinkLabel.h; path = Classes/MLLinkLabel.h; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D32FABBD373378EA852CCBC625FE4479 /* Pods-TuWen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TuWen-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB11D4157923A74B101A1FADA3D02C9E /* Pods-TuWen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuWen.debug.xcconfig"; sourceTree = "<group>"; };
+		DCCD17AEC9DCAEAD13B8E88813B9BABB /* MLLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLLabel.h; path = Classes/MLLabel.h; sourceTree = "<group>"; };
+		DD25FF753C6B5394B8E2EDDA16C10AFF /* NSString+MLLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MLLabel.m"; path = "Classes/Category/NSString+MLLabel.m"; sourceTree = "<group>"; };
+		E8F9786D9123082A7E285B879A691084 /* NSString+MLExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MLExpression.h"; path = "Classes/Expression/NSString+MLExpression.h"; sourceTree = "<group>"; };
+		F0195DD37536FCA93FBF4552F76269A8 /* NSString+MLExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MLExpression.m"; path = "Classes/Expression/NSString+MLExpression.m"; sourceTree = "<group>"; };
+		F75D8C3D59DB7E7A631048268713964F /* MLExpressionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLExpressionManager.m; path = Classes/Expression/MLExpressionManager.m; sourceTree = "<group>"; };
+		FA4C50644B3ADEA79F8EDED8793A8F0B /* NSAttributedString+MLExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+MLExpression.m"; path = "Classes/Expression/NSAttributedString+MLExpression.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		144C1D46550BCD8BBDC87B4C011018B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF4FF3D894CD1762A05B5CA0EFAB83C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191FEA9366CC4F5EB6EDD9D653FE8B34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C43FEA06F7068F7EDD5C235370A7BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		058FB14EB706FE98E8F2879E29285608 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88065FFD9D0A7A1B8A7213E8A7D69D7B /* MLLabel.xcconfig */,
+				4468AAD0DB7D19480E70867E04DC2D24 /* MLLabel-dummy.m */,
+				68D657A8F9462F1B958BA745E32C24A9 /* MLLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MLLabel";
+			sourceTree = "<group>";
+		};
+		2BBEAE1DB363EC47516B9C2D26D32940 /* Pods-TuWen */ = {
+			isa = PBXGroup;
+			children = (
+				32E07CF73FE72D809492EA3AF190C5DB /* Pods-TuWen-acknowledgements.markdown */,
+				D32FABBD373378EA852CCBC625FE4479 /* Pods-TuWen-acknowledgements.plist */,
+				99DE06BB905B26D095CC2D9980CBBA25 /* Pods-TuWen-dummy.m */,
+				5EB3D1366CC5A4E90BC8208D8B17D451 /* Pods-TuWen-frameworks.sh */,
+				755EDA474F8153F75A36F7A883DD1521 /* Pods-TuWen-resources.sh */,
+				DB11D4157923A74B101A1FADA3D02C9E /* Pods-TuWen.debug.xcconfig */,
+				05423D60E3EA25F489D7C0CF29B75E69 /* Pods-TuWen.release.xcconfig */,
+			);
+			name = "Pods-TuWen";
+			path = "Target Support Files/Pods-TuWen";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C36D70C6D8F63402A32271688C2487C4 /* Pods */,
+				8AE0F52493DA9EBD7919A822245ECDFA /* Products */,
+				B81D3857A0DC884CB08157718497FE8E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AE0F52493DA9EBD7919A822245ECDFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D4557F4626F14E85444447E5DFC0C0 /* libMLLabel.a */,
+				A5542A63E528DA5A28352411AA605F24 /* libPods-TuWen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B81D3857A0DC884CB08157718497FE8E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BBEAE1DB363EC47516B9C2D26D32940 /* Pods-TuWen */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C36D70C6D8F63402A32271688C2487C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF43009AC33AADC8660001DFB0CE11D9 /* MLLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF43009AC33AADC8660001DFB0CE11D9 /* MLLabel */ = {
+			isa = PBXGroup;
+			children = (
+				08D34A59967381939F0FAFA27683DCAA /* MLExpressionManager.h */,
+				F75D8C3D59DB7E7A631048268713964F /* MLExpressionManager.m */,
+				DCCD17AEC9DCAEAD13B8E88813B9BABB /* MLLabel.h */,
+				195FC05C0CA8B4A7789369A52F7A99CA /* MLLabel.m */,
+				28B146E5321DF72B19378BD009011DD9 /* MLLabel+Override.h */,
+				21BF64561297A830E407143F1A0896D7 /* MLLabelLayoutManager.h */,
+				B7E18284DEFE7E37F83695D4B03504A8 /* MLLabelLayoutManager.m */,
+				BC9B0A877FC50A6E4E474DA3A236EA89 /* MLLinkLabel.h */,
+				44266BA2388AECB563093EF691B3EE97 /* MLLinkLabel.m */,
+				7707FB4D2E5B806C50A758B52578B568 /* MLTextAttachment.h */,
+				223CAEE5870A59F32FA6DB38F933393B /* MLTextAttachment.m */,
+				272B702D640DF9EA0845A70F600CAC15 /* NSAttributedString+MLExpression.h */,
+				FA4C50644B3ADEA79F8EDED8793A8F0B /* NSAttributedString+MLExpression.m */,
+				B5825648E66C9A42D9CB2E84DE5E9782 /* NSAttributedString+MLLabel.h */,
+				B75FE296DDBE7271195EC51D23853E2A /* NSAttributedString+MLLabel.m */,
+				3F8ACF85DFFC84A0AE600F980ED94B21 /* NSMutableAttributedString+MLLabel.h */,
+				809AA9AB550A1FC59691117FB5D0D706 /* NSMutableAttributedString+MLLabel.m */,
+				E8F9786D9123082A7E285B879A691084 /* NSString+MLExpression.h */,
+				F0195DD37536FCA93FBF4552F76269A8 /* NSString+MLExpression.m */,
+				5F6E2A6D7E9F48CCA523972A0AEB3BF2 /* NSString+MLLabel.h */,
+				DD25FF753C6B5394B8E2EDDA16C10AFF /* NSString+MLLabel.m */,
+				058FB14EB706FE98E8F2879E29285608 /* Support Files */,
+			);
+			path = MLLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		260602FA3A8631784DDA78B4CF1C3A61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1A0B31D9A9157717B9A93BED3594BA /* MLExpressionManager.h in Headers */,
+				367324E33DD239D6A6E2AAFFA809B7FF /* MLLabel+Override.h in Headers */,
+				A8AFFE2C728654D520A7878F9562E19D /* MLLabel.h in Headers */,
+				94F90F151ED91BF985860F3CB7C7F9A1 /* MLLabelLayoutManager.h in Headers */,
+				DD501D8B11B724AB19101C4BF7C47328 /* MLLinkLabel.h in Headers */,
+				CCFB108F29E453EEF85A8ED92BBF0451 /* MLTextAttachment.h in Headers */,
+				F797D382958D35F685F1D9C3AAC8068F /* NSAttributedString+MLExpression.h in Headers */,
+				BA40D8E99524FBB79B359E5DF666F279 /* NSAttributedString+MLLabel.h in Headers */,
+				B0EC58F15BE9C11404EC57971C0AA54A /* NSMutableAttributedString+MLLabel.h in Headers */,
+				55D85272C8F8781625DC933913B0E5E4 /* NSString+MLExpression.h in Headers */,
+				4C37249F6C6F1F7F28AE6A4585E21AC9 /* NSString+MLLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A13C2021CDCA2F53EED207CA354BA810 /* MLLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F315773B04FA010B96D482F946C75C /* Build configuration list for PBXNativeTarget "MLLabel" */;
+			buildPhases = (
+				BD8693FEF2E3D10F6259F13AB8F41CEB /* Sources */,
+				144C1D46550BCD8BBDC87B4C011018B7 /* Frameworks */,
+				260602FA3A8631784DDA78B4CF1C3A61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLLabel;
+			productName = MLLabel;
+			productReference = A4D4557F4626F14E85444447E5DFC0C0 /* libMLLabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE5BB6019547F1903B5CC2C934ED6E04 /* Pods-TuWen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033E5B218A5AB860CB4E25B3653C5D53 /* Build configuration list for PBXNativeTarget "Pods-TuWen" */;
+			buildPhases = (
+				BE0A0A006436B5B8F271A417FEC0D620 /* Sources */,
+				191FEA9366CC4F5EB6EDD9D653FE8B34 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC051F6B0592BAAE92610F7E8613AB3 /* PBXTargetDependency */,
+			);
+			name = "Pods-TuWen";
+			productName = "Pods-TuWen";
+			productReference = A5542A63E528DA5A28352411AA605F24 /* libPods-TuWen.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8AE0F52493DA9EBD7919A822245ECDFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A13C2021CDCA2F53EED207CA354BA810 /* MLLabel */,
+				CE5BB6019547F1903B5CC2C934ED6E04 /* Pods-TuWen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD8693FEF2E3D10F6259F13AB8F41CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				511D06E3288E0D35BC8C8907A491EAF8 /* MLExpressionManager.m in Sources */,
+				6615EE373964BF109646DC57745265DB /* MLLabel-dummy.m in Sources */,
+				0A0424DB5A9628D8A3B0DB6C3C7F5A65 /* MLLabel.m in Sources */,
+				7F5442E1AAF0EC0EEAE050067DDD14A0 /* MLLabelLayoutManager.m in Sources */,
+				F9DC12B05B624AE124370716889ACD05 /* MLLinkLabel.m in Sources */,
+				F44A933058E8C6D94A05EAFA3922DA48 /* MLTextAttachment.m in Sources */,
+				418DA64400EC3478229F56C09A462F57 /* NSAttributedString+MLExpression.m in Sources */,
+				BBE9F8AF00D8DDF6AE904867332D395F /* NSAttributedString+MLLabel.m in Sources */,
+				07B5FC4CEBD01F4FA2F42FF656DC9147 /* NSMutableAttributedString+MLLabel.m in Sources */,
+				ECD2373BB88CC5714E2D6FCCBAD712DF /* NSString+MLExpression.m in Sources */,
+				BFB75E9723335FC07E62613693387371 /* NSString+MLLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE0A0A006436B5B8F271A417FEC0D620 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40C95F5128E2FFFA1B8FDCA3B207064 /* Pods-TuWen-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FC051F6B0592BAAE92610F7E8613AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MLLabel;
+			target = A13C2021CDCA2F53EED207CA354BA810 /* MLLabel */;
+			targetProxy = DDF2CBBFB1CF716CA32FD9ADFBBCB23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6CCB7DA0BC9B1F307640B4E378FD7605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05423D60E3EA25F489D7C0CF29B75E69 /* Pods-TuWen.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C559A664AB399D1F9175B3F2275CA509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88065FFD9D0A7A1B8A7213E8A7D69D7B /* MLLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MLLabel/MLLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D49479E12BBEE249435FEF90DFDE4AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB11D4157923A74B101A1FADA3D02C9E /* Pods-TuWen.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D7B81676E335B4D573CAF65EAA73A8F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88065FFD9D0A7A1B8A7213E8A7D69D7B /* MLLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MLLabel/MLLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		033E5B218A5AB860CB4E25B3653C5D53 /* Build configuration list for PBXNativeTarget "Pods-TuWen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49479E12BBEE249435FEF90DFDE4AA1 /* Debug */,
+				6CCB7DA0BC9B1F307640B4E378FD7605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27F315773B04FA010B96D482F946C75C /* Build configuration list for PBXNativeTarget "MLLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C559A664AB399D1F9175B3F2275CA509 /* Debug */,
+				D7B81676E335B4D573CAF65EAA73A8F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
