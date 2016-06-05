@@ -6,5 +6,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSAttributedString (EmojiExtension)
+
+/**
+ *  将文本中的表情转字符串
+ *
+ *  @return 字符串
+ */
 - (NSString *)getPlainString;
 @end

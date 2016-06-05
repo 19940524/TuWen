@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface EmojiTextAttachment : NSTextAttachment
+
+/**
+ *  表情nameß
+ */
 @property(strong, nonatomic) NSString *emojiTag;
-@property(assign, nonatomic) CGSize emojiSize;  //For emoji image size
+/**
+ *  表情大小
+ */
+@property(assign, nonatomic) CGSize emojiSize;
 @end

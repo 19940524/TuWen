@@ -9,7 +9,13 @@
 #import "ReplyToolbar.h"
 #import "NSAttributedString+EmojiExtension.h"
 
-@interface ReplyToolbar ()
+//屏幕的物理尺寸
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+@interface ReplyToolbar () {
+    BOOL _isNeedPopEmoji;
+}
 
 @property (strong, nonatomic) UIButton *emojiButton;
 
@@ -18,14 +24,23 @@
 static CGFloat const MaxToolbarHeight = 100.0f;
 
 @implementation ReplyToolbar
+@synthesize keyboardHeight = _keyboardHeight;
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(replyKeyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(replyKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+        _keyboardHeight = -1;
         [self initSubView];
     }
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)initSubView {
@@ -55,6 +70,8 @@ static CGFloat const MaxToolbarHeight = 100.0f;
     [self addConstraint:[NSLayoutConstraint constraintWithItem:emojiButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:sendMessageButton attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0]];
     
     CYTextView *textView = [[CYTextView alloc] init];
+    textView.placeholder = @"  评论一个吧~";
+    textView.placeholderTextColor = [UIColor lightGrayColor];
     textView.font = [UIFont systemFontOfSize:17.0f];
     textView.textContainerInset = UIEdgeInsetsMake(5.0f, 3.0f, 3.0f, 3.0f);
     textView.layer.borderWidth = 0.6f;
@@ -85,7 +102,30 @@ static CGFloat const MaxToolbarHeight = 100.0f;
         button.selected = YES;
     }
     if ([_replyDelegate respondsToSelector:@selector(popEmojiEvent:)]) {
+        _isNeedPopEmoji = button.selected;
+        
+        if (button.selected) {
+            
+            if (!self.textView.resignFirstResponder) {
+                self.textView.inputView = [UIView new];
+                [self.textView becomeFirstResponder];
+                [self reLayoutToolbar:0.2f interval:self.keyboardHeight];
+                
+            } else {
+                
+                [self.textView resignFirstResponder];
+                self.textView.inputView = [UIView new];
+                [self.textView becomeFirstResponder];
+                [self reLayoutToolbar:0.2f interval:self.keyboardHeight];
+            }
+            
+        } else {
+            self.textView.inputView = nil;
+            [self.textView resignFirstResponder];
+            [self.textView becomeFirstResponder];
+        }
         [_replyDelegate popEmojiEvent:button.selected];
+        
     }
 }
 
@@ -94,22 +134,71 @@ static CGFloat const MaxToolbarHeight = 100.0f;
     
     if ([_replyDelegate respondsToSelector:@selector(sendMessageEvent:)]) {
         [_replyDelegate sendMessageEvent:[self.textView.textStorage getPlainString]];
+        
+        if (self.textView.resignFirstResponder) {
+            [_replyDelegate popEmojiEvent:NO];
+            _isNeedPopEmoji = NO;
+            [self reSubViewData];
+            [self reLayoutToolbar:0.2f interval:-40];
+        }
     }
 }
 
+#pragma mark 重置视图配置
 - (void)reSubViewData {
-    
     self.emojiButton.selected = NO;
     self.textView.text = nil;
     self.textView.inputView = nil;
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+#pragma mark 键盘已经出现
+- (void)replyKeyboardDidShow:(NSNotification *)notification {
+    CGRect frame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_isNeedPopEmoji) {
+        [self reLayoutToolbar:duration interval:frame.size.height];
+    }
+}
+
+#pragma mark 键盘即将隐藏
+- (void)replyKeyboardWillHide:(NSNotification *)notification {
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_isNeedPopEmoji) {
+        [self reLayoutToolbar:duration interval:-40];
+    }
+}
+
+#pragma mark 重新布局toolbary坐标
+- (void)reLayoutToolbar:(double)duration interval:(double)interval {
+    NSArray *constraints = [[self superview] constraints];
+    for (NSLayoutConstraint *layoutCon in constraints) {
+            if ([layoutCon.firstItem isEqual:[self superview]] && [layoutCon.secondItem isEqual:self] && layoutCon.secondAttribute == NSLayoutAttributeBottom) {
+                layoutCon.constant = interval;
+            }
+    }
+    
+    [UIView animateWithDuration:duration animations:^{
+        [self layoutIfNeeded];
+    }];
+}
+
+- (void)setKeyboardHeight:(CGFloat)height {
+    if ([_replyDataSource respondsToSelector:@selector(getKeyboardHeight)]) {
+        _keyboardHeight = [_replyDataSource getKeyboardHeight];
+        return;
+    }
+    _keyboardHeight = height;
+}
+
+- (CGFloat)keyboardHeight {
+    if (_keyboardHeight < 0) {
+        if ([_replyDataSource respondsToSelector:@selector(getKeyboardHeight)]) {
+            _keyboardHeight = [_replyDataSource getKeyboardHeight];
+        }
+    }
+    return _keyboardHeight;
+}
 
 @end

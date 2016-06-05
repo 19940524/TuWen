@@ -9,7 +9,26 @@
 #import <UIKit/UIKit.h>
 #import "CYTextView.h"
 
-@protocol ReplyToobarDelegate <NSObject>
+@protocol ReplyToolbarDataSource <NSObject>
+
+@optional
+/**
+ *  自定义表情高度 给toolbar设置y坐标
+ *
+ *  @return height
+ */
+- (CGFloat)getKeyboardHeight;
+
+/**
+ *  获取表情视图
+ *
+ *  @return 表情视图;  留扩展
+ */
+- (UIView *)customKeyboardView;
+
+@end
+
+@protocol ReplyToolbarDelegate <NSObject>
 
 @required
 /**
@@ -40,7 +59,15 @@
 /**
  *  代理
  */
-@property (strong, nonatomic) id <ReplyToobarDelegate> replyDelegate;
+@property (strong, nonatomic) id <ReplyToolbarDelegate> replyDelegate;
+
+@property (strong, nonatomic) id <ReplyToolbarDataSource> replyDataSource;
+
+/**
+ *  自定义表情高度 给toolbar设置y坐标 (代理获取高度就有优先级)
+ */
+@property (assign, nonatomic) CGFloat keyboardHeight;
+
 
 /**
  *  重置subview 配置

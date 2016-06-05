@@ -20,10 +20,7 @@
 
 static const CGFloat keyboardHeight = 250;
 
-@interface ViewController () <ReplyToobarDelegate> {
-    CGRect keyboardFrame;
-    BOOL _isNeedPopEmoji;
-}
+@interface ViewController () <ReplyToolbarDelegate,ReplyToolbarDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *replyButton;
 @property (weak, nonatomic) IBOutlet MLLinkLabel *textLabel;
@@ -52,18 +49,7 @@ static const CGFloat keyboardHeight = 250;
     [self.view addSubview:self.toolbar];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toolbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_toolbar(>=40)]-(-40)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
-    
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(keyboardWillShow:)
-                                                name:UIKeyboardDidShowNotification
-                                              object:nil];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(keyboardWillHide:)
-                                                name:UIKeyboardWillHideNotification
-                                              object:nil];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_toolbar(>=50)]-(-50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
     
     self.textLabel.textColor = [UIColor redColor];
     self.textLabel.font = [UIFont systemFontOfSize:16.0f];
@@ -82,45 +68,6 @@ static const CGFloat keyboardHeight = 250;
     [self.textLabel setDidClickLinkBlock:^(MLLink *link, NSString *linkText, MLLinkLabel *label) {
         NSString *tips = [NSString stringWithFormat:@"Click\nlinkType:%ld\nlinkText:%@\nlinkValue:%@",link.linkType,linkText,link.linkValue];
         SHOW_SIMPLE_TIPS(tips);
-    }];
-    
-}
-
-- (void)keyboardWillHide:(NSNotification *)notification {
-    
-    CGRect frame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    keyboardFrame = frame;
-    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    
-    if (!_isNeedPopEmoji) {
-        [self reLayoutToolbar:duration interval:-40];
-    }
-    
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    
-    CGRect frame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    keyboardFrame = frame;
-    
-    if (!_isNeedPopEmoji) {
-        
-        [self reLayoutToolbar:duration interval:frame.size.height];
-    }
-}
-
-- (void)reLayoutToolbar:(double)duration interval:(double)interval {
-    NSArray *constraints = [self.view constraints];
-    for (NSLayoutConstraint *layoutCon in constraints) {
-        if ([layoutCon.firstItem isEqual:self.view] && [layoutCon.secondItem isEqual:_toolbar] && layoutCon.secondAttribute == NSLayoutAttributeBottom) {
-            layoutCon.constant = interval;
-        }
-    }
-    
-    [UIView animateWithDuration:duration animations:^{
-        [_toolbar layoutIfNeeded];
     }];
 }
 
@@ -143,51 +90,26 @@ static const CGFloat keyboardHeight = 250;
     if (!_toolbar) {
         _toolbar = [[ReplyToolbar alloc] init];
         _toolbar.replyDelegate = self;
+        _toolbar.replyDataSource = self;
+//        _toolbar.keyboardHeight = keyboardHeight;
         [self.view addSubview:_emojiView];
     }
     return _toolbar;
 }
 
-#pragma mark - ReplyToobarDelegate
+#pragma mark - ReplyToolbarDelegate
 - (void)sendMessageEvent:(NSString *)message {
     self.textLabel.text = message;
     self.textLabel.attributedText = [message expressionAttributedStringWithExpression:self.exp];
-    
-    if (_toolbar.textView.resignFirstResponder) {
-
-        [self popEmojiView:NO];
-        _isNeedPopEmoji = NO;
-        [_toolbar reSubViewData];
-        [self reLayoutToolbar:0.2f interval:-40];
-    }
 }
 
 - (void)popEmojiEvent:(BOOL)isPop {
-    _isNeedPopEmoji = isPop;
-    
-    if (isPop) {
-        [self popEmojiView:YES];
-        
-        if (!_toolbar.textView.resignFirstResponder) {
-            _toolbar.textView.inputView = [UIView new];
-            [_toolbar.textView becomeFirstResponder];
-            [self reLayoutToolbar:0.2f interval:keyboardHeight];
-            
-        } else {
-            
-            [_toolbar.textView resignFirstResponder];
-            _toolbar.textView.inputView = [UIView new];
-            [_toolbar.textView becomeFirstResponder];
-            [self reLayoutToolbar:0.2f interval:keyboardHeight];
-        }
-        
-    } else {
-        
-        [self popEmojiView:NO];
-        _toolbar.textView.inputView = nil;
-        [_toolbar.textView resignFirstResponder];
-        [_toolbar.textView becomeFirstResponder];
-    }
+    [self popEmojiView:isPop];
+}
+
+#pragma mark ReplyToolbarDataSource
+- (CGFloat)getKeyboardHeight {
+    return 260;
 }
 
 - (void)popEmojiView:(BOOL)ispop {
@@ -212,6 +134,7 @@ static const CGFloat keyboardHeight = 250;
     [_toolbar.textView insertEmoji:tmojiString emojiImage:image];
     
 }
+
 
 // 成为第一响应者  重写inputAccessoryView
 //- (BOOL)canBecomeFirstResponder {
