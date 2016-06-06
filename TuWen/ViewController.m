@@ -20,7 +20,9 @@
 
 static const CGFloat keyboardHeight = 250;
 
-@interface ViewController () <ReplyToolbarDelegate,ReplyToolbarDataSource>
+@interface ViewController () <ReplyToolbarDelegate,ReplyToolbarDataSource> {
+    NSArray *_attributeds;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *replyButton;
 @property (weak, nonatomic) IBOutlet MLLinkLabel *textLabel;
@@ -46,10 +48,14 @@ static const CGFloat keyboardHeight = 250;
     _emojiImages = @[[UIImage imageNamed:@"emoji_1_big"], [UIImage imageNamed:@"emoji_2_big"],
                      [UIImage imageNamed:@"emoji_3_big"], [UIImage imageNamed:@"emoji_4_big"]];
     
+    _attributeds = @[@{NSForegroundColorAttributeName : [UIColor colorWithRed:73 / 255.0f green:172 / 255.0f blue:213 / 255.0f alpha:1], NSFontAttributeName : [UIFont systemFontOfSize:14]},
+      @{NSForegroundColorAttributeName : [UIColor colorWithRed:53 / 255.0f green:53 / 255.0f blue:53 / 255.0f alpha:1] , NSFontAttributeName : [UIFont systemFontOfSize:14]}];
+    
+    
     [self.view addSubview:self.toolbar];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_toolbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_toolbar(>=50)]-(-50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_toolbar(>=44)]-(-44)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_toolbar)]];
     
     self.textLabel.textColor = [UIColor redColor];
     self.textLabel.font = [UIFont systemFontOfSize:16.0f];
@@ -100,7 +106,30 @@ static const CGFloat keyboardHeight = 250;
 #pragma mark - ReplyToolbarDelegate
 - (void)sendMessageEvent:(NSString *)message {
     self.textLabel.text = message;
-    self.textLabel.attributedText = [message expressionAttributedStringWithExpression:self.exp];
+    
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithAttributedString:[message expressionAttributedStringWithExpression:self.exp]];
+    
+        NSArray *strings = [attrString.string componentsSeparatedByString:@": "];
+    
+        if (strings.count > 0 && attrString.length > 0) {
+            NSString *nickname = strings[0];
+            NSRange range1 = NSMakeRange(0, nickname.length+1);
+            NSDictionary *attrDic = [_attributeds objectAtIndex:0];  // @{NSForegroundColorAttributeName : ColorFromRGB(73, 172, 213), NSFontAttributeName : [UIFont systemFontOfSize:14]}
+            [attrString addAttributes:attrDic range:range1];
+            if (strings.count > 1) {
+                NSString *content = strings[1];
+                NSRange range2 = NSMakeRange(nickname.length+2, content.length);
+                NSDictionary *attrDic2 = [_attributeds objectAtIndex:1]; // @{NSForegroundColorAttributeName : ColorFromRGB(53, 53, 53) , NSFontAttributeName : [UIFont systemFontOfSize:14]}
+                [attrString addAttributes:attrDic2 range:range2];
+    
+                NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+                [paragraphStyle setLineSpacing:2];//调整行间距
+                [attrString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, attrString.string.length)];
+            }
+        }
+    
+    self.textLabel.attributedText = attrString;
+    
 }
 
 - (void)popEmojiEvent:(BOOL)isPop {

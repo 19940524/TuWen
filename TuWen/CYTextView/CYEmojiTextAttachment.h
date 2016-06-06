@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmojiTextAttachment : NSTextAttachment
+@interface CYEmojiTextAttachment : NSTextAttachment
 
 /**
  *  表情nameß

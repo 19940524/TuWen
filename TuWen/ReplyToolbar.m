@@ -139,7 +139,7 @@ static CGFloat const MaxToolbarHeight = 100.0f;
             [_replyDelegate popEmojiEvent:NO];
             _isNeedPopEmoji = NO;
             [self reSubViewData];
-            [self reLayoutToolbar:0.2f interval:-40];
+            [self reLayoutToolbar:0.2f interval:-self.frame.size.height];
         }
     }
 }
@@ -166,7 +166,7 @@ static CGFloat const MaxToolbarHeight = 100.0f;
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     if (!_isNeedPopEmoji) {
-        [self reLayoutToolbar:duration interval:-40];
+        [self reLayoutToolbar:duration interval:-self.frame.size.height];
     }
 }
 
@@ -174,9 +174,9 @@ static CGFloat const MaxToolbarHeight = 100.0f;
 - (void)reLayoutToolbar:(double)duration interval:(double)interval {
     NSArray *constraints = [[self superview] constraints];
     for (NSLayoutConstraint *layoutCon in constraints) {
-            if ([layoutCon.firstItem isEqual:[self superview]] && [layoutCon.secondItem isEqual:self] && layoutCon.secondAttribute == NSLayoutAttributeBottom) {
-                layoutCon.constant = interval;
-            }
+        if ([layoutCon.firstItem isEqual:[self superview]] && [layoutCon.secondItem isEqual:self] && layoutCon.secondAttribute == NSLayoutAttributeBottom) {
+            layoutCon.constant = interval;
+        }
     }
     
     [UIView animateWithDuration:duration animations:^{

@@ -7,8 +7,8 @@
 //
 
 #import "CYTextView.h"
-#import "EmojiTextAttachment.h"
-#import "NSAttributedString+EmojiExtension.h"
+#import "CYEmojiTextAttachment.h"
+#import "NSAttributedString+CYEmojiExtension.h"
 
 static const CGFloat EMOJI_MAX_SIZE = 20;
 
@@ -77,7 +77,7 @@ static const CGFloat FONT = 15;
 #pragma mark - 插入表情
 - (void)insertEmoji:(NSString *)emojiTag emojiImage:(UIImage *)emojiImage {
     
-    EmojiTextAttachment *emojiTextAttachment = [EmojiTextAttachment new];
+    CYEmojiTextAttachment *emojiTextAttachment = [CYEmojiTextAttachment new];
     
     emojiTextAttachment.emojiTag = emojiTag;
     emojiTextAttachment.image = emojiImage;
@@ -94,6 +94,7 @@ static const CGFloat FONT = 15;
     [self drawPlaceholder];
 }
 
+#pragma mark - 重置文本样式
 - (void)resetTextStyle {
     
     NSRange wholeRange = NSMakeRange(0, self.textStorage.length);

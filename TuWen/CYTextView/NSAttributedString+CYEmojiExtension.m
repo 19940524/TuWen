@@ -4,10 +4,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSAttributedString+EmojiExtension.h"
+#import "NSAttributedString+CYEmojiExtension.h"
 #import "EmojiTextAttachment.h"
 
-@implementation NSAttributedString (EmojiExtension)
+@implementation NSAttributedString (CYEmojiExtension)
 
 - (NSString *)getPlainString {
     NSMutableString *plainString = [NSMutableString stringWithString:self.string];

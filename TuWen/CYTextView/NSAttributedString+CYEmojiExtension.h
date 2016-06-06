@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSAttributedString (EmojiExtension)
+@interface NSAttributedString (CYEmojiExtension)
 
 /**
  *  将文本中的表情转字符串

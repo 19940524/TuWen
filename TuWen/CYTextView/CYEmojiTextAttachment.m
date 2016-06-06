@@ -6,9 +6,9 @@
 //  Copyright © 2016年 GuoBin. All rights reserved.
 //
 
-#import "EmojiTextAttachment.h"
+#import "CYEmojiTextAttachment.h"
 
-@implementation EmojiTextAttachment
+@implementation CYEmojiTextAttachment
 - (CGRect)attachmentBoundsForTextContainer:(NSTextContainer *)textContainer proposedLineFragment:(CGRect)lineFrag glyphPosition:(CGPoint)position characterIndex:(NSUInteger)charIndex {
     return CGRectMake(0, 0, _emojiSize.width, _emojiSize.height);
 }
